@@ -7,6 +7,7 @@
         <meta name="keywords" content="HTML, CSS, JavaScript">
   	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../recursos/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../recursos/css/styleform.css">
 </head>
 <body>
     <header> <!--Inicio Header-->
@@ -46,31 +47,59 @@
         </nav>
     </header> <!--Finalizacion Header-->
     <main>
-        <form method='POST'>
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" name='nombre' id="nombre" placeholder="Nombre">
+        <body>  
+  
+            <!-- formulario de contacto en html y css -->  
+          
+            <div class="contact_form">
+          
+              <div class="formulario">      
+                <h1>Formulario de contacto</h1>
+                  <h3>Escríbenos y en breve nos pondremos en contacto</h3>
+                    <form action="mailto:11luisanalandaeta@gmail.com" method="post" enctype="text/plain" >       
+                      
+                          <p>
+                            <label for="nombre" class="colocar_nombre">Nombre
+                              <span class="obligatorio">*</span>
+                            </label>
+                              <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                          </p>
+                          <p>
+                            <label for="email" class="colocar_email">Email
+                              <span class="obligatorio">*</span>
+                            </label>
+                              <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                          </p>
+                          <p>
+                            <label for="telefone" class="colocar_telefono">Teléfono
+                            </label>
+                              <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                          </p>    
+                          <p>
+                            <label for="asunto" class="colocar_asunto">Asunto
+                              <span class="obligatorio">*</span>
+                            </label>
+                              <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                          </p>    
+                        
+                          <p>
+                            <label for="mensaje" class="colocar_mensaje">Mensaje
+                              <span class="obligatorio">*</span>
+                            </label>                     
+                             <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                             </p>    
+           
+                        
+                          <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+          
+                          <p class="aviso">
+                            <span class="obligatorio"> * </span>Los campos son obligatorios.
+                          </p>          
+                    
+                    </form>
+              </div>  
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name='email' id="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="number">Contacto</label>
-                <input type="text" class="form-control" name='number' id="number" placeholder="Número de tel/cel">
-            </div>
-            <div class="form-group">
-                <label for="exampleTextarea">Mensaje</label>
-                <textarea class="form-control" name='mensaje' id="mensaje" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <input type="checkbox" required> Acepto la política de privacidad.
-            </div>
-            <button class="btn btn-primary" type="submit">Enviar</button>
-        </form>
-
-    </main>
-    
+    </main>  
 </body>
 <footer> <!--Inicio Footer-->
     <nav class="navbar container">
